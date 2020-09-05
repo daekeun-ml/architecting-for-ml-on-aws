@@ -5,7 +5,7 @@
 
 태양광 발전 시스템은 무공해, 무연료의 태양열을 직접 전기 에너지로 변환하는 시스템입니다. 태양열과 풍력과 같은 재생 가능한 에너지원은 화석 연료에 비해 많은 환경적 이점을 제공하고 들어오는 태양광 에너지가 높을 때, 저렴한 비용으로 전기를 제공해줄 수 있습니다. 하지만, 기상 조건, 발전소의 위도, 시간 등 다양한 환경 요인들의 변화에 따른 변동폭이 크기 때문에 기존 화석 연료도 같이 사용합니다.
 
-![alt text](Images/forecast_1.png )
+![alt text](Images/forecast_1.png)
 
 유틸리티 회사 *EnergyX*는 태양광 에너지 공급과 화석 연료 공급의 적절한 균형을 유지하기 위해 정확한 태양 에너지 생산 예측을 필요로 합니다. 예측 오류는 과도한 연료 소비를 초래하거나 인근 유틸리티에서 전기를 긴급 구매해야 하기 때문에 회사에 막대한 비용을 초래할 수 있기 때문입니다. 
 
@@ -33,7 +33,7 @@
 ### Ground Truth
 - CSV 포맷
 - **solar_training_199401_200712.csv**: 1994년 1월 1일부터 운영되고 있는 오클라호마 Mesonet(http://www.mesonet.org/) 98곳 사이트에 들어오는 총 태양광 에너지로 5분마다 일사계로 직접 측정하고 일출부터 23:55 UTC 까지의 데이터를 모두 합산
-    - Dimension: $5113 \times 99$ (5113일은 1994년 1월 1일부터 2007년 12월 31일까의 총 일수)
+    - Dimension: 5113 x 99 (5113일은 1994년 1월 1일부터 2007년 12월 31일까의 총 일수)
     - 1번째 컬럼은 datetime이며, 나머지 컬럼은 98곳 사이트에 대한 태양광 에너지 정답
     
 ### Features
@@ -44,30 +44,30 @@
 
 - 15개 피쳐에 대한 설명은 아래와 같습니다.
 
-|Variable|	Description	| Units
+|Variable|	설명	| 단위
 |---:|---:|---:|
-|apcp_sfc|	3-Hour accumulated precipitation at the surface|	kg m-2
-|dlwrf_sfc|	Downward long-wave radiative flux average at the surface|	W m-2
-|dswrf_sfc|	Downward short-wave radiative flux average at the surface|	W m-2
-|pres_msl|	Air pressure at mean sea level|	Pa
-|pwat_eatm|	Precipitable Water over the entire depth of the atmosphere|	kg m-2
-|spfh_2m|	Specific Humidity at 2 m above ground|	kg kg-1
-|tcdc_eatm|	Total cloud cover over the entire depth of the atmosphere|	 %
-|tcolc_eatm|	Total column-integrated condensate over the entire atmos.|	kg m-2
-|tmax_2m|	 Maximum Temperature over the past 3 hours at 2 m above the ground|	 K
-|tmin_2m|	 Mininmum Temperature over the past 3 hours at 2 m above the ground|	 K
-|tmp_2m|	 Current temperature at 2 m above the ground|	 K
-|tmp_sfc|	 Temperature of the surface|	 K
-|ulwrf_sfc|	 Upward long-wave radiation at the surface|	 W m-2
-|ulwrf_tatm|	 Upward long-wave radiation at the top of the atmosphere|	 W m-2
-|uswrf_sfc|	 Upward short-wave radiation at the surface|	 W m-2    
+|apcp_sfc|	3시간 동안 표면에 축적된 강수량|	kg m-2
+|dlwrf_sfc|	표면에서 하향 장파 복사(long-wave radiative flux) 평균|	W m-2
+|dswrf_sfc|	표면에서 하향 단파 복사(short-wave radiative flux) 평균|	W m-2
+|pres_msl|	평균 해수면에서의 기압|	Pa
+|pwat_eatm|	전체 대기 깊이에 걸쳐 침전 가능한 물|	kg m-2
+|spfh_2m|	지상 2m의 특정 습도|	kg kg-1
+|tcdc_eatm|	대기의 총 클라우드 커버|	 %
+|tcolc_eatm|	전체 대기에 대한 총 컬럼 통합 응축수|	kg m-2
+|tmax_2m|	지상 2미터에서 지난 3시간 동안의 최대 온도|	 K
+|tmin_2m|	지상 2미터에서 지난 3시간 동안의 최저 온도|	 K
+|tmp_2m|	지상 2미터에서의 현재 온도|	 K
+|tmp_sfc|	 표면의 현재 온도|	 K
+|ulwrf_sfc|	 표면에서의 상향 장파 복사|	 W m-2
+|ulwrf_tatm| 대기에서의 상향 장파 복사|	 W m-2
+|uswrf_sfc|	 표면에서의 상향 단파 복사|	 W m-2    
 
-- Dimension: $(5113 \times 11 \times 5 \times 9 \times 16)$
-    - 5113: timestamp
-    - 11: ensemble features
-    - 5: 측정 시간 단위 (12,15,18,21,24시)
-    - 9: 위도
-    - 16: 경도
+- Dimension: (5113 x 11 x 5 x 9 x 16)
+    - 5113: timestamp(5,113일)
+    - 11: 앙상블 피쳐(11종류의 기상 예보 피쳐)
+    - 5: 측정 시간 단위로 12,15,18,21,24시에 총 5번의 예측을 수행
+    - 9: GEFS 포인트의 위도
+    - 16: GEFS 포인트의  경도
 
 ### Stations (Optional)
 - CSV 포맷
@@ -77,12 +77,12 @@
     - nlat: 위도
     - elon: 경도
     - elev: 고도
-- Dimension: $(98 \times 4)$
+- Dimension: (98 x 4)
 
 #### GEFS 정보 (Optional)
 - NetCDF4 포맷
 - 훈련에 직접적으로 사용하지 않고 검증용으로 사용하는 GEFS 그리드 포인트 정보입니다. 
-- ***gefs_elevations.nc**
+- **gefs_elevations.nc**
 
 ## Classical Time-series Forecasting
 
@@ -105,9 +105,16 @@
 ## Get Started
 
 ### Starter Code
+* [Starter Jupyter Notebook](Starter-Code/Solar-Energy-Prediction-Starter.ipynb)
 * SageMaker DeepAR 예제: https://github.com/awslabs/amazon-sagemaker-examples/blob/master/introduction_to_amazon_algorithms/deepar_electricity/DeepAR-Electricity.ipynb 
 
 ### Tips
+
+#### 문제 정의
+문제를 단기 예측, 중기 예측, 장기 예측으로 각각 나눠서 접근해 보세요.
+- 단기 예측 (24시간~72시간) - 전력 시스템 운영 및 제어
+- 중기 예측 (1주~2주) - 태양 에너지 스케줄링
+- 장기 예측 (수개월 이상) - 장기 태양 에너지 평가 및 발전소 유지보수 계획
 
 #### Pre-processing
 Kaggle에 등록된 컴피티션이지만, Starter Notebook이 없습니다. 따라서, 상기 Starter Notebook을 적극 활용해 주세요.
@@ -130,3 +137,4 @@ Amazon SageMaker를 사용하신다면 수많은 배포(deployment) 핸즈온들
 * https://skymind.ai/wiki/lstm
 * https://towardsdatascience.com/the-fall-of-rnn-lstm-2d1594c74ce0
 * http://karpathy.github.io/2015/05/21/rnn-effectiveness/
+
