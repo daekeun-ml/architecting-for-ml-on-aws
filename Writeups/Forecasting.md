@@ -105,7 +105,7 @@
 ## Get Started
 
 ### Starter Code
-* [Starter Jupyter Notebook](Starter-Code/Solar-Energy-Prediction-Starter.ipynb)
+* [Starter Jupyter Notebook](../Starter-Code/Solar-Energy-Prediciton-Starter.ipynb)
 * SageMaker DeepAR 예제: https://github.com/awslabs/amazon-sagemaker-examples/blob/master/introduction_to_amazon_algorithms/deepar_electricity/DeepAR-Electricity.ipynb 
 
 ### Tips
