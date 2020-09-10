@@ -138,3 +138,6 @@ Amazon SageMaker를 사용하신다면 수많은 배포(deployment) 핸즈온들
 * https://towardsdatascience.com/the-fall-of-rnn-lstm-2d1594c74ce0
 * http://karpathy.github.io/2015/05/21/rnn-effectiveness/
 
+<br>
+
+[Privacy](https://aws.amazon.com/privacy/) | [Site terms](https://aws.amazon.com/terms/) | © 2020, Amazon Web Services, Inc. or its affiliates. All rights reserved.

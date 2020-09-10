@@ -52,3 +52,7 @@
 * DeepComposer Learning Capsule 2 Autoregressive CNN - https://console.aws.amazon.com/deepcomposer/home?region=us-east-1#learningCapsules/autoregressive
 * Creating a new music genre model - https://aws.amazon.com/blogs/machine-learning/creating-a-music-genre-model-with-your-own-data-in-aws-deepcomposer/
 * SoundCloud - https://soundcloud.com/tags/awsdeepcomposer
+
+<br>
+
+[Privacy](https://aws.amazon.com/privacy/) | [Site terms](https://aws.amazon.com/terms/) | © 2020, Amazon Web Services, Inc. or its affiliates. All rights reserved.
