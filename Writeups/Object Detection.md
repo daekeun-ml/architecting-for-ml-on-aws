@@ -117,3 +117,8 @@ Amazon SageMaker를 사용하신다면 수많은 배포(deployment) 핸즈온들
 * https://doi.org/10.1117/1.JRS.11.042611
 * https://arxiv.org/pdf/1411.4038.pdf
 * https://thehonestanalytics.com/automatic-identification-systems-market-2018-global-industry-analysis-by-key-players-segmentation-trends-and-forecast-by-2023/
+
+
+<br>
+
+[Privacy](https://aws.amazon.com/privacy/) | [Site terms](https://aws.amazon.com/terms/) | © 2020, Amazon Web Services, Inc. or its affiliates. All rights reserved.
